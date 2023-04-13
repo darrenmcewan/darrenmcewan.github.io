@@ -78,13 +78,13 @@ $(function(){
         // and make Sunday last
 
         var dow = now[6];
-        dow--;
+        //dow--;
 
         // Sunday!
-        if(dow < 0){
+        //if(dow < 0){
             // Make it last
-            dow = 6;
-        }
+         //   dow = 6;
+        //}
 
         // Mark the active day of the week
         weekdays.removeClass('active').eq(dow).addClass('active');
