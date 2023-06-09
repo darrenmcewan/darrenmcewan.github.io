@@ -1,0 +1,26 @@
+<!--The goal of this page is for a user to enter in the name of a movie or tv show and click submit. Upon submitting, the user will see a confirmation pop up-->
+<!--The page will then refresh after 5 seconds-->
+
+<!--The user will then be able to see the movie or tv show they entered in the search bar in the "My Requests" section of the page-->
+<!--The user will also be able to see the status of their request (pending, approved, denied)-->
+<!--The user will also be able to see the date they submitted their request-->
+<!--The user will also be able to see the date their request was approved or denied-->
+<!--The user will also be able to see the date their request was added to the database-->
+<!--The user will also be able to see the date their request was removed from the database-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Requests</title>
+    <link rel="stylesheet" type="text/css" href="../css/requests.css">
+</head>
+<body>
+    <h1>Requests</h1>
+    <h3>Search for a movie or tv show</h3>
+    <form action="requests.php" method="post">
+        <input type="text" name="search" placeholder="Search for a movie or tv show">
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <script src="../js/requests.js"></script>
+</body>
+</html>
