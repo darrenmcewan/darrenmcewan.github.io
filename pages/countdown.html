@@ -15,6 +15,23 @@
             background-color: #FFE6E6;
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50" y="50" font-size="70" text-anchor="middle" alignment-baseline="middle" fill="rgba(255, 182, 193, 0.3)">👶</text></svg>');
         }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #FF1493;
+        }
         .container {
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
@@ -23,6 +40,7 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 90%;
+            margin-top: 80px;
         }
         h1, h2 {
             color: #FF69B4;
@@ -68,6 +86,7 @@
     </style>
 </head>
 <body>
+    <a href="../index.html" class="home-button">Return to Home</a>
     <div class="container">
         <div class="icon">🫡</div>
         <h1>Countdown to Fatherhood</h1>
