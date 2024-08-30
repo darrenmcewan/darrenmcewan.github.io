@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Fatherhood - February 14, 2025</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #FFE6E6;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50" y="50" font-size="70" text-anchor="middle" alignment-baseline="middle" fill="rgba(255, 182, 193, 0.3)">👶</text></svg>');
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1, h2 {
+            color: #FF69B4;
+        }
+        #countdown {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #FF1493;
+        }
+        #progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #FFC0CB;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        #progress {
+            width: 0;
+            height: 100%;
+            background-color: #FF69B4;
+            transition: width 0.5s;
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .message {
+            margin-top: 20px;
+            font-style: italic;
+            color: #FF69B4;
+        }
+        .fun-facts {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+        }
+        .fun-facts ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">👨‍👧</div>
+        <h1>Countdown to Fatherhood</h1>
+        <div id="countdown"></div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <p class="message">Your amazing journey to fatherhood begins soon!</p>
+        
+        <div class="fun-facts">
+            <h2>Fun Facts about February 14, 2025</h2>
+            <ul>
+                <li><strong>Chinese Zodiac:</strong> Year of the Snake</li>
+                <li><strong>Zodiac Sign:</strong> Aquarius</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const countdownDate = new Date("February 14, 2025 00:00:00").getTime();
+        const startDate = new Date().getTime();
+        const totalDuration = countdownDate - startDate;
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            const elapsedTime = now - startDate;
+            const progress = (elapsedTime / totalDuration) * 100;
+            document.getElementById("progress").style.width = `${progress}%`;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Welcome to fatherhood!";
+                document.querySelector(".message").innerHTML = "Congratulations on becoming a dad to a beautiful girl!";
+            }
+        }
+
+        updateCountdown();
+        const x = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
