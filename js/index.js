@@ -29,8 +29,8 @@ var timeline = {
         {
             event: "Event 4",
             color: "#B3A369",
-            startDate: "2021-08",
-            endDate: "present",
+            startDate: "2022-08",
+            endDate: "2024-08",
             title: "Georgia Tech",
             type: "M.S. in Analytics"
         },
